@@ -1,9 +1,9 @@
 # Clean URLs - remove .html extension
-/about /about.html 200
-/services /services.html 200
-/contact /contact.html 200
+/about /about.html 301
+/services /services.html 301
+/contact /contact.html 301
 
-# Redirect www to non-www (or vice versa - handled by Cloudflare)
+# Redirect www to non-www (handled by Cloudflare)
 # https://www.bensoltandecommerce.tn/* https://bensoltandecommerce.tn/:splat 301
 
 # SPA fallback not needed - we have static pages
