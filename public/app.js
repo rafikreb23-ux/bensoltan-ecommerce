@@ -90,13 +90,6 @@
     });
   });
 
-  // Arabic-Indic digits mapping
-  const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
-
-  function toArabicDigits(num) {
-    return String(num).replace(/\d/g, d => arabicDigits[d]);
-  }
-
   // ========================================
   // Counter Animation (Intersection Observer)
   // ========================================
@@ -110,12 +103,12 @@
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = Math.floor(eased * (target - start) + start);
-      element.textContent = toArabicDigits(current);
+      element.textContent = current.toLocaleString('en-US');
 
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        element.textContent = toArabicDigits(target);
+        element.textContent = target.toLocaleString('en-US');
       }
     }
 
