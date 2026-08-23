@@ -985,6 +985,82 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
+   Product Grid & Cards
+   ======================================== */
+.service-header {
+  margin-bottom: var(--spacing-8);
+  text-align: right;
+}
+
+.service-header .service-category {
+  margin-bottom: var(--spacing-3);
+}
+
+.service-header .service-detail-title {
+  margin-bottom: var(--spacing-3);
+}
+
+.service-header p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-6);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+.product-card {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: var(--spacing-4);
+}
+
+.product-info h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-1);
+  color: var(--color-text);
+}
+
+.product-info p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.section-cta {
+  text-align: center;
+  padding-top: var(--spacing-4);
+}
+
+/* ========================================
    Process
    ======================================== */
 .process { padding: var(--spacing-16) 0; background: var(--color-surface); }
