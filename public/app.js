@@ -13,9 +13,6 @@
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
   const contactForm = document.getElementById('contact-form');
-  const formSuccess = document.getElementById('form-success');
-  const resetFormBtn = document.getElementById('reset-form');
-  const submitBtn = document.getElementById('submit-btn');
   const statNumbers = document.querySelectorAll('[data-count]');
   const milestoneNumbers = document.querySelectorAll('.milestone-number[data-count]');
 
@@ -192,49 +189,7 @@
     });
   });
 
-  // Form submission
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      const firstError = contactForm.querySelector('.error');
-      if (firstError) firstError.focus();
-      return;
-    }
-
-    // Show loading state
-    submitBtn.disabled = true;
-    submitBtn.classList.add('btn-loading');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      // Success
-      contactForm.hidden = true;
-      formSuccess.hidden = false;
-      formSuccess.focus();
-    } catch (error) {
-      // Error handling
-      alert('حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى أو التواصل عبر البريد الإلكتروني.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.classList.remove('btn-loading');
-    }
-  });
-
-  // Reset form
-  resetFormBtn.addEventListener('click', () => {
-    contactForm.reset();
-    contactForm.hidden = false;
-    formSuccess.hidden = true;
-    contactForm.querySelectorAll('.error').forEach(el => {
-      el.classList.remove('error');
-      el.removeAttribute('aria-invalid');
-    });
-    contactForm.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-    contactForm.querySelector('input[name="name"]').focus();
-  });
+  
 
   // ========================================
   // Active Nav Link on Scroll
