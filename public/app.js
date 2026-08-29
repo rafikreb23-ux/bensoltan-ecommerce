@@ -237,15 +237,67 @@
     input.addEventListener('input', () => {
       if (input.classList.contains('error')) validateField(input);
     });
-  });
+});
 
-  
+    // Form submission
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  // ========================================
-  // Active Nav Link on Scroll
-  // ========================================
-  const sections = document.querySelectorAll('section[id]');
-  const navLinkMap = {};
+      if (!validateForm()) {
+        const firstError = contactForm.querySelector('.error');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.classList.add('btn-loading');
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success - Formspree returns JSON or redirects
+          contactForm.hidden = true;
+          formSuccess.hidden = false;
+          formSuccess.focus();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        // Error handling
+        alert('حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى أو التواصل عبر البريد الإلكتروني.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('btn-loading');
+      }
+    });
+
+    // Reset form
+    resetFormBtn.addEventListener('click', () => {
+      contactForm.reset();
+      contactForm.hidden = false;
+      formSuccess.hidden = true;
+      contactForm.querySelectorAll('.error').forEach(el => {
+        el.classList.remove('error');
+        el.removeAttribute('aria-invalid');
+      });
+      contactForm.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+      contactForm.querySelector('input[name="name"]').focus();
+    });
+
+    // ========================================
+    // Active Nav Link on Scroll
+    // ========================================
+    const sections = document.querySelectorAll('section[id]');
+    const navLinkMap = {};
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
