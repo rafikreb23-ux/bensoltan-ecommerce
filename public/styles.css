@@ -1512,4 +1512,5 @@ h1, h2, h3, h4, h5, h6 {
   .header, .hero-actions, .btn, .contact-form, .footer { display: none !important; }
   .hero { min-height: auto; padding: 0; }
   body { font-size: 12pt; }
-}
+}   
+ 
