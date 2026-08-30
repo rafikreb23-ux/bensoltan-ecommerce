@@ -17,6 +17,56 @@
   const milestoneNumbers = document.querySelectorAll('.milestone-number[data-count]');
 
   // ========================================
+  // FormSubmit Success Handler
+  // ========================================
+  function handleFormSubmitSuccess() {
+    if (window.location.search.includes('success=true')) {
+      showSuccessMessage();
+      // Clean up URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }
+
+  function showSuccessMessage() {
+    const successDiv = document.createElement('div');
+    successDiv.className = 'form-success-message';
+    successDiv.innerHTML = `
+      <div style="
+        background: #d1fae5;
+        border: 1px solid #10b981;
+        color: #065f46;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      ">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <div>
+          <strong>تم إرسال رسالتك بنجاح!</strong><br>
+          <small>شكراً لتواصلك معنا. سنتواصل معك خلال 24 ساعة.</small>
+        </div>
+      </div>
+    `;
+
+    const formWrapper = document.querySelector('.contact-form-wrapper');
+    if (formWrapper) {
+      const form = document.querySelector('.contact-form');
+      if (form) {
+        formWrapper.insertBefore(successDiv, form);
+        // Auto-hide after 5 seconds
+        setTimeout(() => successDiv.remove(), 5000);
+      }
+    }
+  }
+
+  // Check for success message on page load
+  document.addEventListener('DOMContentLoaded', handleFormSubmitSuccess);
+
+  // ========================================
   // Header Scroll Effect
   // ========================================
   function handleHeaderScroll() {
@@ -189,59 +239,47 @@
     });
 });
 
-    // Form submission
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  // FormSubmit handles submission via redirect, just do client-side validation
+  // Form submission
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      if (!validateForm()) {
-        const firstError = contactForm.querySelector('.error');
-        if (firstError) firstError.focus();
-        return;
-      }
+    if (!validateForm()) {
+      const firstError = contactForm.querySelector('.error');
+      if (firstError) firstError.focus();
+      return;
+    }
 
-      // Show loading state
-      submitBtn.disabled = true;
-      submitBtn.classList.add('btn-loading');
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('btn-loading');
 
-      try {
-        const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          // Success - Formspree returns JSON or redirects
-          contactForm.hidden = true;
-          formSuccess.hidden = false;
-          formSuccess.focus();
-        } else {
-          throw new Error('Form submission failed');
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
         }
-      } catch (error) {
-        // Error handling
-        alert('حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى أو التواصل عبر البريد الإلكتروني.');
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('btn-loading');
-      }
-    });
-
-    // Reset form
-    resetFormBtn.addEventListener('click', () => {
-      contactForm.reset();
-      contactForm.hidden = false;
-      formSuccess.hidden = true;
-      contactForm.querySelectorAll('.error').forEach(el => {
-        el.classList.remove('error');
-        el.removeAttribute('aria-invalid');
       });
-      contactForm.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-      contactForm.querySelector('input[name="name"]').focus();
-    });
+
+      if (response.ok) {
+        // Success - Formspree returns JSON
+        contactForm.hidden = true;
+        formSuccess.hidden = false;
+        formSuccess.focus();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      // Error handling
+      alert('حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى أو التواصل عبر البريد الإلكتروني.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('btn-loading');
+    }
+  });
 
     // ========================================
     // Active Nav Link on Scroll

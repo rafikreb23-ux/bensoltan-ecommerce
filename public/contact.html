@@ -155,14 +155,10 @@
 
           <div class="contact-form-wrapper" aria-labelledby="form-title">
             <h2 id="form-title" class="section-title">أرسل لنا رسالة</h2>
-            <form class="contact-form" id="contact-form" action="https://formsubmit.co/contact@bensoltandecommerce.tn" method="POST">
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xwlkpavz" method="POST" novalidate>
               <input type="hidden" name="_next" value="/contact?success=true">
-              <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_subject" value="رسالة جديدة من موقع بن سلطان">
-              <input type="hidden" name="_next" value="/contact?success=true">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="رسالة جديدة من موقع بن سلطان">
-              <div class="form-row">
+              <input type="hidden" name="_language" value="ar">
                 <div class="form-group">
                   <label for="name">الاسم الكامل <span class="required" aria-hidden="true">*</span></label>
                   <input type="text" id="name" name="name" required autocomplete="name" placeholder="مثال: أحمد بن علي">
@@ -218,7 +214,16 @@
               </button>
               <p class="form-note">سنرد عليك خلال 24 ساعة كحد أقصى</p>
             </form>
-          </div>>>>
+
+            <div class="form-success" id="form-success" hidden aria-live="polite">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <h3>تم إرسال رسالتك بنجاح!</h3>
+              <p>شكراً لتواصلك معنا. سنتواصل معك خلال 24 ساعة على البريد الإلكتروني أو رقم الهاتف الذي قدمته.</p>
+              <button type="button" class="btn btn-secondary" id="reset-form">إرسال رسالة أخرى</button>
+            </div>
         </div>
       </div>
     </section>
