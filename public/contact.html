@@ -140,7 +140,7 @@
             <div class="social-contact">
               <h3>تابعنا</h3>
               <div class="social-links" role="list" aria-label="روابط التواصل الاجتماعي">
-                <a href="#" class="social-link" aria-label="فيسبوك" role="listitem">
+                <a href="https://www.facebook.com/ceramic.bois" class="social-link" aria-label="فيسبوك" role="listitem" target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 </a>
                 <a href="#" class="social-link" aria-label="لينكد إن" role="listitem">
@@ -155,7 +155,13 @@
 
           <div class="contact-form-wrapper" aria-labelledby="form-title">
             <h2 id="form-title" class="section-title">أرسل لنا رسالة</h2>
-            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xwlkpavz" method="POST" novalidate>
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/contact@bensoltandecommerce.tn" method="POST">
+              <input type="hidden" name="_next" value="/contact?success=true">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="رسالة جديدة من موقع بن سلطان">
+              <input type="hidden" name="_next" value="/contact?success=true">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="رسالة جديدة من موقع بن سلطان">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">الاسم الكامل <span class="required" aria-hidden="true">*</span></label>
@@ -212,17 +218,7 @@
               </button>
               <p class="form-note">سنرد عليك خلال 24 ساعة كحد أقصى</p>
             </form>
-
-            <div class="form-success" id="form-success" hidden aria-live="polite">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-              <h3>تم إرسال رسالتك بنجاح!</h3>
-              <p>شكراً لتواصلك معنا. سنتواصل معك خلال 24 ساعة على البريد الإلكتروني أو رقم الهاتف الذي قدمته.</p>
-              <button type="button" class="btn btn-secondary" id="reset-form">إرسال رسالة أخرى</button>
-            </div>
-          </div>>>
+          </div>>>>
         </div>
       </div>
     </section>

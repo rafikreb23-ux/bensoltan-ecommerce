@@ -17,56 +17,6 @@
   const milestoneNumbers = document.querySelectorAll('.milestone-number[data-count]');
 
   // ========================================
-  // FormSubmit Success Message Handler
-  // ========================================
-  function handleFormSubmitSuccess() {
-    if (window.location.search.includes('success=true')) {
-      showSuccessMessage();
-      // Clean up URL
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
-  }
-
-  function showSuccessMessage() {
-    const successDiv = document.createElement('div');
-    successDiv.className = 'form-success-message';
-    successDiv.innerHTML = `
-      <div style="
-        background: #d1fae5;
-        border: 1px solid #10b981;
-        color: #065f46;
-        padding: 1rem;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      ">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-        </svg>
-        <div>
-          <strong>تم إرسال رسالتك بنجاح!</strong><br>
-          <small>شكراً لتواصلك معنا. سنتواصل معك خلال 24 ساعة.</small>
-        </div>
-      </div>
-    `;
-
-    const formWrapper = document.querySelector('.contact-form-wrapper');
-    if (formWrapper) {
-      const form = document.querySelector('.contact-form');
-      if (form) {
-        formWrapper.insertBefore(successDiv, form);
-        // Auto-hide after 5 seconds
-        setTimeout(() => successDiv.remove(), 5000);
-      }
-    }
-  }
-
-  // Check for success message on page load
-  document.addEventListener('DOMContentLoaded', handleFormSubmitSuccess);
-
-  // ========================================
   // Header Scroll Effect
   // ========================================
   function handleHeaderScroll() {
