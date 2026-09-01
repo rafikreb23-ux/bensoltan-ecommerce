@@ -1252,9 +1252,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--spacing-4);
 }
 
-@media (min-width: 640px) {
+/* Removed media query that makes fields side-by-side on larger screens */
+/* @media (min-width: 640px) {
   .form-row { grid-template-columns: 1fr 1fr; }
-}
+} */
 
 .form-group { margin-bottom: var(--spacing-4); }
 
