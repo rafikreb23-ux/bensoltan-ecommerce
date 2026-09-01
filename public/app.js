@@ -13,6 +13,8 @@
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
   const contactForm = document.getElementById('contact-form');
+  const formSuccess = document.getElementById('form-success');
+  const submitBtn = document.getElementById('submit-btn');
   const statNumbers = document.querySelectorAll('[data-count]');
   const milestoneNumbers = document.querySelectorAll('.milestone-number[data-count]');
 

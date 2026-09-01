@@ -1353,6 +1353,42 @@ h1, h2, h3, h4, h5, h6 {
    ======================================== */
 .faq-section { padding: var(--spacing-16) 0; background: var(--color-surface); }
 
+.form-success-message {
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-success-message svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.form-success-message div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-success-message strong {
+  font-weight: 600;
+}
+
+.form-success-message small {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
