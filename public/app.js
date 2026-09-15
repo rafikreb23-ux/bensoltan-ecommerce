@@ -365,6 +365,44 @@
   });
 
   // ========================================
+  // Image Protection: Disable right-click & drag on images
+  // ========================================
+  function protectImages() {
+    // Disable right-click context menu on images
+    document.addEventListener('contextmenu', (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Disable drag on images
+    document.addEventListener('dragstart', (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Disable text selection on images (prevents copy-paste of image)
+    document.querySelectorAll('img').forEach(img => {
+      img.style.userSelect = 'none';
+      img.style.webkitUserSelect = 'none';
+      img.style.msUserSelect = 'none';
+      img.style.mozUserSelect = 'none';
+      img.style.userDrag = 'none';
+      img.style.webkitUserDrag = 'none';
+    });
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', protectImages);
+  } else {
+    protectImages();
+  }
+
+  // ========================================
   // Console Branding
   // ========================================
   console.log('%cبنسولتان للتجارة الإلكترونية', 'font-size: 20px; font-weight: bold; color: #1e40af;');
