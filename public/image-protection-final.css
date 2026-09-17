@@ -1,0 +1,19 @@
+/* ========================================
+   Image Protection - Disable right-click, drag, selection
+   ======================================== */
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Allow pointer events for interactive images (links, buttons) */
+a img,
+button img,
+[role="button"] img {
+  pointer-events: auto;
+}
