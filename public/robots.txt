@@ -1,0 +1,10 @@
+# Robots.txt for bensoltandecommerce.tn
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.bensoltandecommerce.tn/sitemap.xml
+
+# Disallow admin/private paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
