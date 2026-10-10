@@ -403,6 +403,28 @@
   }
 
   // ========================================
+  // Ensure Social Links Work Correctly
+  // ========================================
+  function ensureSocialLinksWork() {
+    document.querySelectorAll('.social-link[target="_blank"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Allow default behavior for external links with target="_blank"
+        // Don't prevent default - let the browser handle it
+        if (link.href && link.target === '_blank') {
+          return true;
+        }
+      });
+    });
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureSocialLinksWork);
+  } else {
+    ensureSocialLinksWork();
+  }
+
+  // ========================================
   // Console Branding
   // ========================================
   console.log('%cبنسولتان للتجارة الإلكترونية', 'font-size: 20px; font-weight: bold; color: #1e40af;');
