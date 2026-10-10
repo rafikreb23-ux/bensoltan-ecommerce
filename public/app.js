@@ -143,14 +143,7 @@
     });
   });
 
-  // Ensure external links (including social links) work normally
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href^="http"]');
-    if (link && link.target === '_blank') {
-      // Allow external links to open normally in new tab
-      return true;
-    }
-  });
+  
 
   // ========================================
   // Counter Animation (Intersection Observer)
@@ -419,10 +412,35 @@
   // Ensure Social Links Work Correctly
   // ========================================
   function ensureSocialLinksWork() {
+    // Fix LinkedIn link href if it's incorrect
+    document.querySelectorAll('.social-link[aria-label="لينكد إن"]').forEach(link => {
+      if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
+        link.setAttribute('href', 'https://www.linkedin.com/company/societe-ben-soltan-de-commerce/');
+      }
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    // Fix other social links
+    document.querySelectorAll('.social-link[aria-label="فيسبوك"]').forEach(link => {
+      if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
+        link.setAttribute('href', 'https://www.facebook.com/ceramic.bois');
+      }
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    document.querySelectorAll('.social-link[aria-label="واتساب"]').forEach(link => {
+      if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
+        link.setAttribute('href', 'https://wa.me/21622951910');
+      }
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    // Ensure external links work normally
     document.querySelectorAll('.social-link[target="_blank"]').forEach(link => {
       link.addEventListener('click', (e) => {
-        // Allow default behavior for external links with target="_blank"
-        // Don't prevent default - let the browser handle it
         if (link.href && link.target === '_blank') {
           return true;
         }
