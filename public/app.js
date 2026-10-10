@@ -123,20 +123,33 @@
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
 
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        const headerOffset = header.offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      // Only handle internal anchor links (not external URLs)
+      if (targetId.startsWith('#')) {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerOffset = header.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
 
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
 
-        target.focus({ preventScroll: true });
+          target.focus({ preventScroll: true });
+        }
       }
+      // External links (http/https) are allowed to navigate normally
     });
+  });
+
+  // Ensure external links (including social links) work normally
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="http"]');
+    if (link && link.target === '_blank') {
+      // Allow external links to open normally in new tab
+      return true;
+    }
   });
 
   // ========================================
