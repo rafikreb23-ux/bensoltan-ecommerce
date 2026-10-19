@@ -1569,3 +1569,52 @@ button img,
 [role="button"] img {
   pointer-events: auto;
 }
+
+/* ========================================
+   Language Switcher (عربي / FR / EN)
+   ======================================== */
+.lang-switch { display: flex; align-items: center; }
+
+.lang-switch-links { display: flex; align-items: center; gap: 2px; }
+
+.lang-link {
+  display: block;
+  padding: var(--spacing-1) var(--spacing-3);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.lang-link:hover,
+.lang-link.active {
+  color: var(--color-primary);
+  background: rgba(30, 64, 175, 0.1);
+}
+
+.lang-link.active { font-weight: 700; }
+
+@media (max-width: 768px) {
+  .lang-switch { justify-content: center; width: 100%; }
+  .lang-switch-links { justify-content: center; width: 100%; }
+  .lang-link { padding: var(--spacing-2) var(--spacing-4); }
+}
+
+/* ========================================
+   LTR Overrides (French / English pages)
+   body.ltr flips direction-sensitive styles
+   ======================================== */
+body.ltr { direction: ltr; }
+
+@media (min-width: 768px) {
+  body.ltr .hero-content { text-align: left; }
+  body.ltr .hero-text { text-align: left; }
+  body.ltr .hero-description { margin-left: auto; margin-right: 0; }
+  body.ltr .hero-card { transform: translateX(-20px); }
+}
+
+body.ltr .about-text .section-title { text-align: left; }
+body.ltr .service-header { text-align: left; }
+body.ltr .contact-info .section-title { text-align: left; }
+body.ltr .contact-form .section-title { text-align: left; }
