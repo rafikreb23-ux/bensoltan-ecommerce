@@ -6,6 +6,23 @@
   'use strict';
 
   // ========================================
+  // Dynamic Experience Years (auto-updates every year)
+  // Company founded in 2013 → years = current year - 2013
+  // [data-years]      → animated counters (sets data-count dynamically)
+  // [data-years-text] → inline text numbers
+  // ========================================
+  const FOUNDING_YEAR = 2013;
+  const experienceYears = Math.max(1, new Date().getFullYear() - FOUNDING_YEAR);
+
+  document.querySelectorAll('[data-years]').forEach(el => {
+    el.setAttribute('data-count', String(experienceYears));
+  });
+
+  document.querySelectorAll('[data-years-text]').forEach(el => {
+    el.textContent = String(experienceYears);
+  });
+
+  // ========================================
   // DOM Elements
   // ========================================
   const header = document.getElementById('header');
