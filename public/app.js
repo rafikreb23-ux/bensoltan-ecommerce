@@ -133,6 +133,36 @@
   });
 
   // ========================================
+  // Language Dropdown (globe switcher)
+  // ========================================
+  const langDropdown = document.querySelector('.lang-dropdown');
+
+  if (langDropdown) {
+    const langToggle = langDropdown.querySelector('.lang-toggle');
+
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = langDropdown.classList.toggle('open');
+      langToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('open');
+        langToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && langDropdown.classList.contains('open')) {
+        langDropdown.classList.remove('open');
+        langToggle.setAttribute('aria-expanded', 'false');
+        langToggle.focus();
+      }
+    });
+  }
+
+  // ========================================
   // Smooth Scroll for Anchor Links
   // ========================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

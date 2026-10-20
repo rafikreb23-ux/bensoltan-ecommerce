@@ -31,11 +31,17 @@
         <li role="none"><a href="/services" class="nav-link active" role="menuitem" aria-current="page">منتجاتنا</a></li>
         <li role="none"><a href="/contact" class="nav-link" role="menuitem">تواصل معنا</a></li>
         <li class="lang-switch" role="none">
-          <span class="lang-switch-links" role="group" aria-label="اللغة">
-            <a href="/services" class="lang-link active" hreflang="ar" aria-current="true">عربي</a>
-            <a href="/fr/services" class="lang-link" hreflang="fr">FR</a>
-            <a href="/en/services" class="lang-link" hreflang="en">EN</a>
-          </span>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-toggle" aria-expanded="false" aria-haspopup="true" aria-label="تغيير اللغة">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="lang-menu" role="menu" aria-label="اللغة">
+              <li role="none"><a href="/services" role="menuitem" class="lang-link active" hreflang="ar" aria-current="true">العربية</a></li>
+              <li role="none"><a href="/fr/services" role="menuitem" class="lang-link" hreflang="fr">Français</a></li>
+              <li role="none"><a href="/en/services" role="menuitem" class="lang-link" hreflang="en">English</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>

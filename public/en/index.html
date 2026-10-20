@@ -32,11 +32,17 @@
         <li role="none"><a href="/en/services" class="nav-link" role="menuitem">Products</a></li>
         <li role="none"><a href="/contact" class="nav-link" role="menuitem">Contact</a></li>
         <li class="lang-switch" role="none">
-          <span class="lang-switch-links" role="group" aria-label="Language">
-            <a href="/" class="lang-link" hreflang="ar">عربي</a>
-            <a href="/fr/" class="lang-link" hreflang="fr">FR</a>
-            <a href="/en/" class="lang-link active" hreflang="en" aria-current="true">EN</a>
-          </span>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="lang-menu" role="menu" aria-label="Language">
+              <li role="none"><a href="/" role="menuitem" class="lang-link" hreflang="ar">العربية</a></li>
+              <li role="none"><a href="/fr/" role="menuitem" class="lang-link" hreflang="fr">Français</a></li>
+              <li role="none"><a href="/en/" role="menuitem" class="lang-link active" hreflang="en" aria-current="true">English</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>
