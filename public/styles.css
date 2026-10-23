@@ -539,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-icon svg { width: 24px; height: 24px; }
 
-.card-icon img { width: 28px; height: 28px; object-fit: contain; }
+.card-icon img { width: 28px; height: 28px; }
 
 .hero-card h3 {
   font-size: var(--font-size-lg);
@@ -613,7 +613,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-icon svg { width: 28px; height: 28px; }
 
-.feature-icon img { width: 32px; height: 32px; object-fit: contain; }
+.feature-icon img { width: 32px; height: 32px; }
 
 .feature-card h3 {
   font-size: var(--font-size-xl);
