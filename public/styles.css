@@ -539,6 +539,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-icon svg { width: 24px; height: 24px; }
 
+.card-icon img { width: 28px; height: 28px; }
+
 .hero-card h3 {
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-2);
@@ -611,6 +613,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-icon svg { width: 28px; height: 28px; }
 
+.feature-icon img { width: 32px; height: 32px; }
+
 .feature-card h3 {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-2);
@@ -662,6 +666,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-icon svg { width: 28px; height: 28px; }
+
+.service-icon img { width: 32px; height: 32px; }
 
 .service-card h3 {
   font-size: var(--font-size-xl);
@@ -859,6 +865,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team-avatar svg { width: 40px; height: 40px; }
+
+.team-avatar img { width: 60px; height: auto; object-fit: contain; }
 
 .team-card h3 { font-size: var(--font-size-xl); margin-bottom: var(--spacing-1); }
 .team-role { font-weight: 600; color: var(--color-primary); margin-bottom: var(--spacing-2); }
@@ -1232,6 +1240,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-link svg { width: 20px; height: 20px; }
+
+.social-contact .social-link svg { width: 34px; height: 34px; }
 
 .contact-form-wrapper {
   background: var(--color-surface-elevated);

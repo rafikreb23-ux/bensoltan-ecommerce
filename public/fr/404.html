@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection en cours...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Cairo', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f8fafc; direction: ltr; }
+    .container { text-align: center; padding: 2rem; max-width: 400px; }
+    .spinner { width: 48px; height: 48px; border: 4px solid #e2e8f0; border-top-color: #1e40af; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1.5rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    h1 { color: #1e293b; margin-bottom: 0.5rem; font-size: 1.5rem; }
+    p { color: #64748b; margin-bottom: 1.5rem; }
+    a { display: none; padding: 0.75rem 1.5rem; background: #1e40af; color: white; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    a:hover { background: #1e3a8a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner" aria-hidden="true"></div>
+    <h1>Redirection en cours...</h1>
+    <p>Veuillez patienter</p>
+    <a href="/fr/" id="fallback">Retour à l'accueil</a>
+  </div>
+  <script>
+    const cleanPaths = {
+      '/fr/about': '/fr/about.html',
+      '/fr/services': '/fr/services.html',
+      '/fr/contact': '/fr/contact.html',
+      '/fr/about/': '/fr/about.html',
+      '/fr/services/': '/fr/services.html',
+      '/fr/contact/': '/fr/contact.html'
+    };
+    const path = window.location.pathname;
+    const target = cleanPaths[path] || cleanPaths[path.replace(/\/$/, '')];
+    if (target) {
+      window.location.replace(target);
+    } else {
+      document.getElementById('fallback').style.display = 'inline-block';
+      document.querySelector('.spinner').style.display = 'none';
+      document.querySelector('h1').textContent = 'Page introuvable';
+      document.querySelector('p').textContent = 'Chemin inconnu : ' + path;
+    }
+  </script>
+</body>
+</html>
