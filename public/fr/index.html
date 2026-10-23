@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.v2.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="ltr">
   <header class="header" id="header">
@@ -28,9 +28,9 @@
       </button>
       <ul class="nav-menu" id="nav-menu" role="menubar">
         <li role="none"><a href="/fr/" class="nav-link active" role="menuitem" aria-current="page">Accueil</a></li>
-        <li role="none"><a href="/fr/about" class="nav-link" role="menuitem">À propos</a></li>
+        <li role="none"><a href="/about" class="nav-link" role="menuitem">À propos</a></li>
         <li role="none"><a href="/fr/services" class="nav-link" role="menuitem">Nos produits</a></li>
-        <li role="none"><a href="/fr/contact" class="nav-link" role="menuitem">Contact</a></li>
+        <li role="none"><a href="/contact" class="nav-link" role="menuitem">Contact</a></li>
         <li class="lang-switch" role="none">
           <div class="lang-dropdown">
             <button type="button" class="lang-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Changer de langue">
@@ -57,8 +57,8 @@
           <h1 id="hero-title" class="hero-title">Importation de bois d'Europe et commerce de gros de matériaux divers</h1>
           <p class="hero-description">Spécialistes de la fourniture des meilleures essences de bois des marchés européens, avec un commerce de gros de matériaux de construction et d'équipements variés à des prix compétitifs</p>
           <div class="hero-actions">
-            <a href="/fr/contact" class="btn btn-primary">Contactez-nous</a>
-            <a href="/fr/about" class="btn btn-secondary">À propos</a>
+            <a href="/contact" class="btn btn-primary">Contactez-nous</a>
+            <a href="/about" class="btn btn-secondary">À propos</a>
           </div>
           <div class="hero-stats">
             <div class="stat">
@@ -78,14 +78,20 @@
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-card">
             <div class="card-icon">
-              <img src="/images/icons/anchor.png" alt="Importation de bois" width="28" height="28">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
             </div>
             <h3>Importation de bois</h3>
             <p>Les meilleures essences d'Europe : hêtre, chêne, pin et acajou</p>
           </div>
           <div class="hero-card">
             <div class="card-icon">
-              <img src="/images/icons/shoppingbags.png" alt="Commerce de gros" width="28" height="28">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
             </div>
             <h3>Commerce de gros</h3>
             <p>Matériaux de construction, équipements et produits divers aux prix d'usine</p>
@@ -103,42 +109,60 @@
         <div class="features-grid">
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/tree.png" alt="Bois européen certifié" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
             </div>
             <h3>Bois européen certifié</h3>
             <p>Importation directe auprès de scieries certifiées d'Europe, qualité garantie et conforme aux normes</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/store.png" alt="Stock permanent et varié" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
             </div>
             <h3>Stock permanent et varié</h3>
             <p>Hêtre, chêne, pin, acajou, abachi et panneaux MDF/HDF – disponibles en grandes quantités</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/coin.png" alt="Prix de gros compétitifs" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
             </div>
             <h3>Prix de gros compétitifs</h3>
             <p>Achat direct à la source garantissant les meilleurs prix aux entrepreneurs et commerçants</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/lorry.png" alt="Livraison dans tous les gouvernorats" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
             </div>
             <h3>Livraison dans tous les gouvernorats</h3>
             <p>Transport rapide et fiable vers Tunis, Sfax, Sousse, Gafsa et tout le pays</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/headset.png" alt="Consultation technique gratuite" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
             </div>
             <h3>Consultation technique gratuite</h3>
             <p><span data-years-text>13</span> années d'expertise pour vous aider à choisir le bois adapté à votre projet</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/brick.png" alt="Matériaux et équipements de construction" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
             </div>
             <h3>Matériaux et équipements de construction</h3>
             <p>Isolation, équipements solaires, fittings sanitaires et électriques, outillage de menuiserie – tout pour votre projet en un seul endroit</p>
@@ -156,7 +180,11 @@
         <div class="services-grid">
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
-              <img src="/images/icons/ship.png" alt="Importation de bois européen" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
             </div>
             <h3>Importation de bois européen</h3>
             <p>Hêtre, chêne, pin, acajou, abachi – stock permanent et varié</p>
@@ -164,15 +192,20 @@
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
-              <img src="/images/icons/cart.png" alt="Commerce de gros de matériaux divers" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
             </div>
             <h3>Commerce de gros de matériaux divers</h3>
             <p>Matériaux de construction et équipements, isolation, équipements solaires, fittings sanitaires, électriques et outillage de menuiserie</p>
-            <a href="/fr/contact" class="service-link">Demander un devis <span aria-hidden="true">→</span></a>
+            <a href="/contact" class="service-link">Demander un devis <span aria-hidden="true">→</span></a>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
-              <img src="/images/icons/bolt.png" alt="Livraison rapide et fiable" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
             </div>
             <h3>Livraison rapide et fiable</h3>
             <p>Expédition vers tous les gouvernorats de Tunisie, emballage professionnel, délais respectés</p>
@@ -180,7 +213,7 @@
           </article>
         </div>
         <div class="section-cta">
-          <a href="/fr/contact" class="btn btn-outline">Demander un devis</a>
+          <a href="/contact" class="btn btn-outline">Demander un devis</a>
         </div>
       </div>
     </section>
@@ -190,7 +223,7 @@
         <div class="cta-content">
           <h2 id="cta-title">Prêt à développer votre activité ?</h2>
           <p>Contactez-nous dès aujourd'hui pour une consultation gratuite et un devis personnalisé pour votre projet</p>
-          <a href="/fr/contact" class="btn btn-primary btn-large">Demander un devis</a>
+          <a href="/contact" class="btn btn-primary btn-large">Demander un devis</a>
         </div>
       </div>
     </section>
@@ -221,9 +254,9 @@
           <h4>Liens rapides</h4>
           <ul>
             <li><a href="/fr/">Accueil</a></li>
-            <li><a href="/fr/about">À propos</a></li>
+            <li><a href="/about">À propos</a></li>
             <li><a href="/fr/services">Nos produits</a></li>
-            <li><a href="/fr/contact">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
         <nav class="footer-nav" aria-label="Nos produits">

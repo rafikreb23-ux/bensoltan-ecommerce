@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.v2.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="ltr">
   <header class="header" id="header">
@@ -28,9 +28,9 @@
       </button>
       <ul class="nav-menu" id="nav-menu" role="menubar">
         <li role="none"><a href="/en/" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
-        <li role="none"><a href="/en/about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="/about" class="nav-link" role="menuitem">About</a></li>
         <li role="none"><a href="/en/services" class="nav-link" role="menuitem">Products</a></li>
-        <li role="none"><a href="/en/contact" class="nav-link" role="menuitem">Contact</a></li>
+        <li role="none"><a href="/contact" class="nav-link" role="menuitem">Contact</a></li>
         <li class="lang-switch" role="none">
           <div class="lang-dropdown">
             <button type="button" class="lang-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
@@ -57,8 +57,8 @@
           <h1 id="hero-title" class="hero-title">European Timber Import & Wholesale Trading of Various Materials</h1>
           <p class="hero-description">We specialize in supplying the finest wood from European markets, along with wholesale trading of building materials and equipment at competitive prices</p>
           <div class="hero-actions">
-            <a href="/en/contact" class="btn btn-primary">Contact Us</a>
-            <a href="/en/about" class="btn btn-secondary">About Us</a>
+            <a href="/contact" class="btn btn-primary">Contact Us</a>
+            <a href="/about" class="btn btn-secondary">About Us</a>
           </div>
           <div class="hero-stats">
             <div class="stat">
@@ -78,14 +78,20 @@
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-card">
             <div class="card-icon">
-              <img src="/images/icons/anchor.png" alt="Timber import" width="28" height="28">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
             </div>
             <h3>Timber Import</h3>
             <p>Finest European woods: beech, oak, pine and mahogany</p>
           </div>
           <div class="hero-card">
             <div class="card-icon">
-              <img src="/images/icons/shoppingbags.png" alt="Wholesale trading" width="28" height="28">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
             </div>
             <h3>Wholesale Trading</h3>
             <p>Building materials, equipment and various products at factory prices</p>
@@ -103,42 +109,60 @@
         <div class="features-grid">
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/tree.png" alt="Certified European wood" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
             </div>
             <h3>Certified European Wood</h3>
             <p>Direct import from certified European mills – guaranteed quality and standards compliance</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/store.png" alt="Permanent and diverse stock" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
             </div>
             <h3>Permanent & Diverse Stock</h3>
             <p>Beech, oak, pine, mahogany, abachi and MDF/HDF boards – available in large quantities</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/coin.png" alt="Competitive wholesale prices" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
             </div>
             <h3>Competitive Wholesale Prices</h3>
             <p>Direct sourcing guarantees the best prices for contractors and traders</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/lorry.png" alt="Nationwide delivery" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
             </div>
             <h3>Nationwide Delivery</h3>
             <p>Fast and reliable shipping to Tunis, Sfax, Sousse, Gafsa and all other regions</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/headset.png" alt="Free technical consultation" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
             </div>
             <h3>Free Technical Consultation</h3>
             <p><span data-years-text>13</span> years of expertise to help you choose the right wood for your project</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <img src="/images/icons/brick.png" alt="Building materials and equipment" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
             </div>
             <h3>Building Materials & Equipment</h3>
             <p>Insulation, solar equipment, sanitary and electrical fittings, carpentry tools – everything your project needs in one place</p>
@@ -156,7 +180,11 @@
         <div class="services-grid">
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
-              <img src="/images/icons/ship.png" alt="European timber import" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
             </div>
             <h3>European Timber Import</h3>
             <p>Beech, oak, pine, mahogany, abachi – permanent and diverse stock</p>
@@ -164,15 +192,20 @@
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
-              <img src="/images/icons/cart.png" alt="Wholesale of various materials" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
             </div>
             <h3>Wholesale of Various Materials</h3>
             <p>Building materials and equipment, insulation, solar equipment, sanitary and electrical fittings, carpentry tools</p>
-            <a href="/en/contact" class="service-link">Request a Quote <span aria-hidden="true">→</span></a>
+            <a href="/contact" class="service-link">Request a Quote <span aria-hidden="true">→</span></a>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
-              <img src="/images/icons/bolt.png" alt="Fast and reliable delivery" width="32" height="32">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
             </div>
             <h3>Fast & Reliable Delivery</h3>
             <p>Shipping to all Tunisian regions, professional packaging, on-time delivery</p>
@@ -180,7 +213,7 @@
           </article>
         </div>
         <div class="section-cta">
-          <a href="/en/contact" class="btn btn-outline">Request a Quote</a>
+          <a href="/contact" class="btn btn-outline">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -190,7 +223,7 @@
         <div class="cta-content">
           <h2 id="cta-title">Ready to grow your business?</h2>
           <p>Contact us today for a free consultation and a customized quote for your project</p>
-          <a href="/en/contact" class="btn btn-primary btn-large">Request a Quote</a>
+          <a href="/contact" class="btn btn-primary btn-large">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -221,9 +254,9 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/en/">Home</a></li>
-            <li><a href="/en/about">About</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/en/services">Products</a></li>
-            <li><a href="/en/contact">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
         <nav class="footer-nav" aria-label="Our products">
