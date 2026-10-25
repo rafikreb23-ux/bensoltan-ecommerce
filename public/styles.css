@@ -611,6 +611,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-icon svg { width: 28px; height: 28px; }
 
+.feature-icon img { width: 32px; height: 32px; object-fit: contain; }
+
 .feature-card h3 {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-2);
