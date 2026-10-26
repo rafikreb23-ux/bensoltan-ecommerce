@@ -526,8 +526,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,9 +537,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--spacing-4);
 }
 
-.card-icon svg { width: 24px; height: 24px; }
+.card-icon svg { width: 32px; height: 32px; }
 
-.card-icon img { width: 32px; height: 32px; object-fit: contain; }
+.card-icon img { width: 48px; height: 48px; object-fit: contain; }
 
 .hero-card h3 {
   font-size: var(--font-size-lg);
@@ -600,8 +600,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-icon {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -611,9 +611,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
 }
 
-.feature-icon svg { width: 28px; height: 28px; }
+.feature-icon svg { width: 36px; height: 36px; }
 
-.feature-icon img { width: 32px; height: 32px; object-fit: contain; }
+.feature-icon img { width: 52px; height: 52px; object-fit: contain; }
 
 .feature-card h3 {
   font-size: var(--font-size-xl);
@@ -654,8 +654,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-icon {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -665,7 +665,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--spacing-4);
 }
 
-.service-icon svg { width: 28px; height: 28px; }
+.service-icon svg { width: 36px; height: 36px; }
+
+.service-icon img { width: 52px; height: 52px; object-fit: contain; }
 
 .service-card h3 {
   font-size: var(--font-size-xl);
