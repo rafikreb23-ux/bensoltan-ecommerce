@@ -866,6 +866,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-avatar svg { width: 40px; height: 40px; }
 
+.team-avatar img { width: 60px; height: 60px; object-fit: contain; border-radius: 50%; }
+
 .team-card h3 { font-size: var(--font-size-xl); margin-bottom: var(--spacing-1); }
 .team-role { font-weight: 600; color: var(--color-primary); margin-bottom: var(--spacing-2); }
 .team-bio { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
