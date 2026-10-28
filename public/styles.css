@@ -1161,6 +1161,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .method-icon svg { width: 22px; height: 22px; }
 
+.method-icon img { width: 44px; height: 44px; object-fit: contain; }
+
 .method-content h3 {
   font-size: var(--font-size-base);
   font-weight: 600;
