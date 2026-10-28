@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معاينة: Teal Gradient على أيقونة واحدة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Cairo', sans-serif; background: linear-gradient(180deg, #f8fafc, #eef2f7); min-height: 100vh; color: #0f172a; padding: 2.5rem 1.25rem; }
+.wrap { max-width: 900px; margin: 0 auto; }
+h1 { text-align: center; font-size: 1.45rem; margin-bottom: .3rem; }
+h1 span { background: linear-gradient(180deg, #0f766e, #14b8a6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.warn { text-align: center; background: #fef3c7; border: 1.5px solid #f59e0b; color: #92400e; font-weight: 800; padding: .7rem 1.2rem; border-radius: 1rem; margin: 0 auto 2rem; max-width: 660px; }
+.section { background: #fff; border-radius: 1.5rem; padding: 1.7rem 1.6rem 1.9rem; margin-bottom: 1.7rem; box-shadow: 0 10px 30px -12px rgba(15,23,42,.13); border: 1px solid #f1f5f9; }
+.sec-title { font-size: 1.1rem; font-weight: 800; margin-bottom: 1.1rem; text-align: center; }
+.row { display: flex; flex-wrap: wrap; gap: 1.8rem; justify-content: center; }
+.pair { display: flex; flex-direction: column; align-items: center; gap: .7rem; }
+.frame { border: 1px solid #e2e8f0; border-radius: 1.1rem; display: flex; align-items: center; justify-content: center; padding: 12px; width: 180px; height: 180px; background: #f8fafc; }
+.frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.frame-site { border: 2px solid #1e40af; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 8px; width: 88px; height: 88px; background: white; margin: 0 auto; }
+.frame-site img { width: 64px; height: 64px; object-fit: contain; }
+.lbl { font-size: .84rem; font-weight: 800; color: #334155; text-align: center; line-height: 1.5; }
+.chip { display: inline-block; padding: .15rem .6rem; border-radius: 99px; color: #fff; font-weight: 700; font-size: .7rem; }
+.site-colors { display: flex; gap: 1rem; justify-content: center; margin: 1rem 0; flex-wrap: wrap; }
+.color-box { width: 60px; height: 60px; border-radius: 12px; border: 2px solid #e2e8f0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🎨 معاينة — <span>Teal Gradient على استيراد الخشب</span></h1>
+<div class="warn">⚠️ معاينة فقط — أيقونة واحدة فقط، لم يُنشر</div>
+
+<section class="section">
+  <div class="sec-title">التدرج: Teal داكن <span class="chip" style="background:#0f766e">#0f766e</span> ← Teal فاتح <span class="chip" style="background:#14b8a6">#14b8a6</span></div>
+  <div class="site-colors">
+    <div class="color-box" style="background:#0f766e" title="Dark Teal #0f766e"></div>
+    <div class="color-box" style="background:linear-gradient(180deg,#0f766e,#14b8a6)" title="Gradient"></div>
+    <div class="color-box" style="background:#14b8a6" title="Light Teal #14b8a6"></div>
+    <div class="color-box" style="background:#1e40af" title="Site Blue #1e40af"></div>
+    <div class="color-box" style="background:white;border:2px dashed #cbd5e1" title="White bg"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-title">مقارنة: الحالي vs Teal Gradient</div>
+  <div class="row">
+    <div class="pair">
+      <div class="frame"><img src="https://www.bensoltandecommerce.tn/images/icons/european-timber-import-v2.png" alt=""></div>
+      <span class="lbl">الحالي: أرجواني←أزرق</span>
+    </div>
+    <div class="pair">
+      <div class="frame"><img src="icon-preview-assets/european-timber-teal.png" alt=""></div>
+      <span class="lbl">جديد: Teal داكن←فاتح</span>
+      <div class="frame-site"><img src="icon-preview-assets/european-timber-teal.png" alt=""></div>
+      <span class="lbl" style="font-size:.66rem;color:#64748b">في الموقع (64px على أبيض)</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-title">على خلفية الموقع الحقيقية</div>
+  <div style="background:#1e40af;padding:2rem;border-radius:1rem;display:flex;justify-content:center;align-items:center;min-height:120px;">
+    <div class="frame-site" style="background:white;"><img src="icon-preview-assets/european-timber-teal.png" alt=""></div>
+  </div>
+  <p style="text-align:center;color:#64748b;margin-top:.5rem">على خلفية أزرق الموقع (#1e40af)</p>
+</section>
+
+<div class="legend">
+  التدرج: Teal داكن <span class="chip" style="background:#0f766e">#0f766e</span> ← Teal فاتح <span class="chip" style="background:#14b8a6">#14b8a6</span><br>
+  <b>«نعم للكل» = تطبيق على الثلاث أيقونات | «نعم لهذه فقط» = نشر هذه فقط | «لا» = إبقاء الحالي</b>
+</div>
+</div>
+</body>
+</html>
