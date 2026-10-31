@@ -1163,17 +1163,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .method-icon img { width: 44px; height: 44px; object-fit: contain; }
 
-/* Gradient icon using mask-image */
+/* Gradient icon - gradient defined inline in SVG */
 .method-icon--gradient {
-  background: linear-gradient(180deg, #6562EE 0%, #447FE4 100%);
-  -webkit-mask-image: url('/images/icons/warehouse-office-mask.png');
-  mask-image: url('/images/icons/warehouse-office-mask.png');
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  background: transparent;
 }
 
 .method-content h3 {
