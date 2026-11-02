@@ -22,9 +22,13 @@ from scipy import ndimage
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ICONS = os.path.join(ROOT, "public", "images", "icons")
-SRC = os.path.join(ICONS, "warehouse-office-blue-v2.png")   # silhouette + gradient donor
+ASSETS = os.path.join(ROOT, "icon-preview-assets")
+SRC = os.path.join(ASSETS, "warehouse-office-transparent.png")   # silhouette + gradient donor
 OUT = os.path.join(ICONS, "location-blue-v2.png")
 BACKUP = os.path.join(ICONS, "_backup-before-location-solid")
+
+# the donor keeps the transparent background; the delivered PNG in ICONS has a
+# flat grey canvas, so it can no longer be used as an alpha donor
 
 os.makedirs(BACKUP, exist_ok=True)
 if os.path.exists(OUT):
@@ -76,9 +80,15 @@ for y in range(a.shape[0]):
         if (255.0 - c).sum() > 30.0:               # the row really holds body pixels
             row_color[y] = tuple(int(round(v)) for v in c)
     else:
-        px = a[y][alpha[y] > 200][:, :3]
+        # only the saturated blue body pixels define the row colour - the white
+        # artwork (house + ring) must never win, otherwise a white cap shows up
+        # at the top of the pin
+        px = a[y][alpha[y] > 200][:, :3].astype(np.float32)
         if len(px):
-            row_color[y] = Counter(map(tuple, px.tolist())).most_common(1)[0][0]
+            sat = px.max(axis=1) - px.min(axis=1)
+            body = px[sat > 30]
+            if len(body):
+                row_color[y] = tuple(int(round(v)) for v in np.median(body, axis=0))
 
 ys = sorted(row_color)
 for y in range(a.shape[0]):

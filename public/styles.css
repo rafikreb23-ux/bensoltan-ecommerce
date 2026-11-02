@@ -1163,9 +1163,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .method-icon img { width: 44px; height: 44px; object-fit: contain; }
 
-/* Gradient icon - gradient defined inline in SVG */
+/* Gradient icon - gradient defined inline in SVG.
+   الخلفية رمادية (#e2e8f0) مطابقة لملف warehouse-office-blue-v2.png */
 .method-icon--gradient {
-  background: transparent;
+  background: #e2e8f0;
 }
 
 .method-content h3 {

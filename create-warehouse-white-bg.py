@@ -28,9 +28,9 @@ from PIL import Image
 from scipy import ndimage
 
 SRC = r"C:\Users\PC\Desktop\New folder (3)\Warehouse & Office.png"
-ICONS = r"C:\Users\PC\Documents\Default Project\bensoltan-ecommerce\public\images\icons"
-DST = os.path.join(ICONS, "warehouse-office-blue-v2.png")
-BACKUP = os.path.join(ICONS, "_backup-before-white-bg", "warehouse-office-blue-v2.png")
+ASSETS = r"C:\Users\PC\Documents\Default Project\bensoltan-ecommerce\icon-preview-assets"
+DST = os.path.join(ASSETS, "warehouse-office-white.png")
+BACKUP = os.path.join(ASSETS, "_backup-before-white-bg", "warehouse-office-white.png")
 PREVIEW = r"C:\Users\PC\Documents\Default Project\warehouse-icon-preview.png"
 
 TOP = (21, 46, 130)    # #152E82
