@@ -286,13 +286,13 @@
     return isValid;
   }
 
-  // Real-time validation on blur
+    // Real-time validation on blur
   contactForm.querySelectorAll('input, select, textarea').forEach(input => {
     input.addEventListener('blur', () => validateField(input));
     input.addEventListener('input', () => {
       if (input.classList.contains('error')) validateField(input);
     });
-});
+  });
 
   // FormSubmit handles submission via redirect, just do client-side validation
   // Form submission
