@@ -459,8 +459,8 @@
   // Ensure Social Links Work Correctly
   // ========================================
   function ensureSocialLinksWork() {
-    // Fix LinkedIn link href if it's incorrect
-    document.querySelectorAll('.social-link[aria-label="لينكد إن"]').forEach(link => {
+    // Fix LinkedIn link href if it's incorrect (AR / EN / FR labels)
+    document.querySelectorAll('.social-link[aria-label="لينكد إن"], .social-link[aria-label="لينكدإن"], .social-link[aria-label="LinkedIn"]').forEach(link => {
       if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
         link.setAttribute('href', 'https://www.linkedin.com/company/societe-ben-soltan-de-commerce/');
       }
