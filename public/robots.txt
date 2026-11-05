@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.bensoltandecommerce.tn/sitemap.xml
+Sitemap: https://bensoltandecommerce.tn/sitemap.xml
 
 # Disallow admin/private paths (if any)
 # Disallow: /admin/

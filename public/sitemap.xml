@@ -1,75 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.bensoltandecommerce.tn/</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://bensoltandecommerce.tn/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bensoltandecommerce.tn/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bensoltandecommerce.tn/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bensoltandecommerce.tn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bensoltandecommerce.tn/"/>
   </url>
   <url>
-    <loc>https://www.bensoltandecommerce.tn/about</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://bensoltandecommerce.tn/about</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bensoltandecommerce.tn/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bensoltandecommerce.tn/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bensoltandecommerce.tn/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bensoltandecommerce.tn/about"/>
   </url>
   <url>
-    <loc>https://www.bensoltandecommerce.tn/services</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://bensoltandecommerce.tn/services</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bensoltandecommerce.tn/services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bensoltandecommerce.tn/fr/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bensoltandecommerce.tn/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bensoltandecommerce.tn/services"/>
   </url>
   <url>
-    <loc>https://www.bensoltandecommerce.tn/contact</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://bensoltandecommerce.tn/contact</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/fr/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/fr/services</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/en/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/en/services</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/fr/about</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/fr/contact</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/en/about</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.bensoltandecommerce.tn/en/contact</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bensoltandecommerce.tn/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bensoltandecommerce.tn/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bensoltandecommerce.tn/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bensoltandecommerce.tn/contact"/>
   </url>
 </urlset>
