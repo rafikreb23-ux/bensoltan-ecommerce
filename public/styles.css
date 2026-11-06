@@ -1155,21 +1155,31 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(30, 64, 175, 0.1);
+  background: #e2e8f0;
   border-radius: var(--radius-lg);
+  overflow: hidden;
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
 .method-icon svg { width: 22px; height: 22px; }
 
-.method-icon img { width: 44px; height: 44px; object-fit: contain; }
-
-/* Gradient icon - gradient defined inline in SVG.
-   الخلفية رمادية (#e2e8f0) مطابقة لملف warehouse-office-blue-v2.png */
-.method-icon--gradient {
-  background: #e2e8f0;
+/* Circular badge: the PNG already contains the full gradient circle,
+   so it must fill the whole tile to keep the circular edge visible */
+.method-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
 }
+
+/* Gradient badge - the glyph strokes are white on the blue gradient circle */
+.method-icon--gradient {
+  background: linear-gradient(180deg, #152E82 0%, #5FA4F9 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.method-icon--gradient svg { width: 30px; height: 30px; }
 
 .method-content h3 {
   font-size: var(--font-size-base);
@@ -1229,6 +1239,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
 .social-link {
   width: 44px;
   height: 44px;
@@ -1239,6 +1256,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   color: var(--color-text-secondary);
+  overflow: hidden;
   transition: all var(--transition-fast);
 }
 
@@ -1250,6 +1268,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-link svg { width: 20px; height: 20px; }
+
+.social-link img { width: 26px; height: 26px; object-fit: contain; }
+
+/* Social badge: the PNG is a full gradient circle, so it fills the whole link */
+.social-link--circle {
+  background: transparent;
+  border-color: transparent;
+}
+
+.social-link--circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-full);
+}
+
+.social-link--circle:hover {
+  background: transparent;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.06);
+}
 
 .contact-form-wrapper {
   background: var(--color-surface-elevated);
