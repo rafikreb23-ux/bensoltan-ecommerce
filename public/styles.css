@@ -533,7 +533,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(30, 64, 175, 0.1);
   border-radius: var(--radius-lg);
   color: var(--color-primary);
   margin-bottom: var(--spacing-4);
@@ -608,7 +607,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-4);
-  background: rgba(30, 64, 175, 0.1);
   border-radius: var(--radius-lg);
   color: var(--color-primary);
 }
@@ -661,7 +659,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(30, 64, 175, 0.1);
   border-radius: var(--radius-lg);
   color: var(--color-primary);
   margin-bottom: var(--spacing-4);
@@ -861,7 +858,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-4);
-  background: rgba(30, 64, 175, 0.1);
   border-radius: 50%;
   color: var(--color-primary);
 }
@@ -1155,7 +1151,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e2e8f0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   color: var(--color-primary);
@@ -1170,13 +1165,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: var(--radius-lg);
+  border-radius: 0;
 }
 
-/* Gradient badge - the glyph strokes are white on the blue gradient circle */
+/* Gradient badge - glyph strokes are white on the blue gradient circle */
 .method-icon--gradient {
-  background: linear-gradient(180deg, #152E82 0%, #5FA4F9 100%);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  box-shadow: none;
 }
 
 .method-icon--gradient svg { width: 30px; height: 30px; }
