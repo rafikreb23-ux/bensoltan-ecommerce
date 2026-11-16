@@ -461,6 +461,7 @@
   function ensureSocialLinksWork() {
     // Fix LinkedIn link href if it's incorrect (AR / EN / FR labels)
     document.querySelectorAll('.social-link[aria-label="لينكد إن"], .social-link[aria-label="لينكدإن"], .social-link[aria-label="LinkedIn"]').forEach(link => {
+      if (link.getAttribute('aria-disabled') === 'true') return;
       if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
         link.setAttribute('href', 'https://www.linkedin.com/company/societe-ben-soltan-de-commerce/');
       }
@@ -470,6 +471,7 @@
 
     // Fix other social links
     document.querySelectorAll('.social-link[aria-label="فيسبوك"]').forEach(link => {
+      if (link.getAttribute('aria-disabled') === 'true') return;
       if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
         link.setAttribute('href', 'https://www.facebook.com/ceramic.bois');
       }
@@ -478,6 +480,7 @@
     });
 
     document.querySelectorAll('.social-link[aria-label="واتساب"]').forEach(link => {
+      if (link.getAttribute('aria-disabled') === 'true') return;
       if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
         link.setAttribute('href', 'https://wa.me/21622951910');
       }
@@ -487,6 +490,7 @@
 
     // Ensure external links work normally
     document.querySelectorAll('.social-link[target="_blank"]').forEach(link => {
+      if (link.getAttribute('aria-disabled') === 'true') return;
       link.addEventListener('click', (e) => {
         if (link.href && link.target === '_blank') {
           return true;
