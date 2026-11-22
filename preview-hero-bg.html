@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>معاينة خلفية الصفحة الرئيسية</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#111;color:#fff}
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, rgba(15,23,42,0.62) 0%, rgba(15,23,42,0.74) 100%),
+    linear-gradient(90deg, rgba(30,64,175,0.28), rgba(15,23,42,0.18)),
+    url("/images/cover/1.png") center center / cover no-repeat;
+  opacity:1;
+}
+.hero-content{
+  position:relative;
+  text-align:center;
+  z-index:1;
+  background:rgba(0,0,0,0.35);
+  padding:2rem 3rem;
+  border-radius:16px;
+}
+h1{margin:0 0 .5rem}
+p{margin:0;opacity:.9}
+.note{position:fixed;bottom:10px;left:10px;font-size:12px;opacity:.7}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>معاينة خلفية الصفحة الرئيسية</h1>
+    <p>الصورة: /images/cover/1.png</p>
+    <p>سيتم تطبيقها في styles.css .hero-bg</p>
+  </div>
+</div>
+<div class="note">ملاحظة: تم نسخ 1.png من C:\Users\PC\Desktop\New folder (2)\cover إلى public/images/cover/1.png</div>
+</body>
+</html>
