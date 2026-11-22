@@ -1,5 +1,5 @@
-/* ========================================
-   بنسولتان - Stylesheet
+﻿/* ========================================
+   Ø¨Ù†Ø³ÙˆÙ„ØªØ§Ù† - Stylesheet
    ======================================== */
 
 :root {
@@ -84,7 +84,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* 🌄 الخلفية الكاملة للصفحة — صورة ثابتة */
+  /* ðŸŒ„ Ø§Ù„Ø®Ù„ÙÙŠØ© Ø§Ù„ÙƒØ§Ù…Ù„Ø© Ù„Ù„ØµÙØ­Ø© â€” ØµÙˆØ±Ø© Ø«Ø§Ø¨ØªØ© */
   background-image: url("/images/home-hero.jpg");
   background-size: cover;
   background-position: center center;
@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-bg {
-  display: none; /* مخفية — الخلفية الآن على body */
+  display: none; /* Ù…Ø®ÙÙŠØ© â€” Ø§Ù„Ø®Ù„ÙÙŠØ© Ø§Ù„Ø¢Ù† Ø¹Ù„Ù‰ body */
 }
 
 .hero-content {
@@ -503,12 +503,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--spacing-4);
   justify-content: center;
   margin-bottom: var(--spacing-10);
-}
-
-.hero .btn-secondary {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--color-primary);
-  border-color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-stats {
@@ -611,7 +605,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 
-/* عناوين الأقسام الشفافة — بيضاء لتُقرأ فوق الصورة */
+/* Ø¹Ù†Ø§ÙˆÙŠÙ† Ø§Ù„Ø£Ù‚Ø³Ø§Ù… Ø§Ù„Ø´ÙØ§ÙØ© â€” Ø¨ÙŠØ¶Ø§Ø¡ Ù„ØªÙÙ‚Ø±Ø£ ÙÙˆÙ‚ Ø§Ù„ØµÙˆØ±Ø© */
 .features .section-title,
 .services-preview .section-title {
   color: white;
@@ -1678,7 +1672,7 @@ img {
   -ms-user-select: none;
   user-select: none;
   user-drag: none;
-  /* pointer-events: none; — محذوف لتفعيل النقر على الصور داخل الروابط */
+  /* pointer-events: none; â€” Ù…Ø­Ø°ÙˆÙ Ù„ØªÙØ¹ÙŠÙ„ Ø§Ù„Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø§Ù„ØµÙˆØ± Ø¯Ø§Ø®Ù„ Ø§Ù„Ø±ÙˆØ§Ø¨Ø· */
 }
 
 /* Allow pointer events for interactive images (links, buttons) */
@@ -1689,7 +1683,7 @@ button img,
 }
 
 /* ========================================
-   Language Switcher — Globe Dropdown
+   Language Switcher â€” Globe Dropdown
    ======================================== */
 .lang-switch { display: flex; align-items: center; }
 
