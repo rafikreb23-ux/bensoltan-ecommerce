@@ -447,17 +447,36 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.hero-badge {
+.hero-badge,
+.hero-actions .btn-primary,
+.hero-actions .btn-secondary {
   display: inline-block;
-  padding: var(--spacing-1) var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-5);
   font-size: var(--font-size-sm);
   font-weight: 600;
   color: white;
   background: rgba(30, 58, 138, 0.68);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-full);
-  margin-bottom: var(--spacing-4);
   backdrop-filter: blur(10px);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.hero-badge {
+  margin-bottom: var(--spacing-4);
+}
+
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-secondary:hover {
+  background: rgba(30, 58, 138, 0.85);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.hero-actions .btn-primary:active,
+.hero-actions .btn-secondary:active {
+  transform: translateY(0);
 }
 
 .hero-title {
