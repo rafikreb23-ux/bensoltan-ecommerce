@@ -802,6 +802,38 @@ h1, h2, h3, h4, h5, h6 {
 /* ========================================
    About Page
    ======================================== */
+/* About page background - Ben Soltan warehouse cover photo */
+body.about-page {
+  background-image: url("/images/cover/Designerproducts.jpg");
+}
+
+/* About page: no frosted layers - show the warehouse photo crisp like the home hero */
+body.about-page .page-hero,
+body.about-page .about-story,
+body.about-page .values,
+body.about-page .team {
+  background: none;
+  border-bottom: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Same text treatment as the home hero: white text with dark glow */
+body.about-page .page-title,
+body.about-page .section-title {
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.45);
+}
+
+body.about-page .page-subtitle,
+body.about-page .section-subtitle,
+body.about-page .about-text p {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 3px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
 .about-story {
   padding: var(--spacing-16) 0;
   background: rgba(255, 255, 255, 0.9);
