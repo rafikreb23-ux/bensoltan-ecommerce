@@ -882,9 +882,27 @@ body.services-page .service-category {
 /* ========================================
    Contact (تواصل معنا) Page
    ======================================== */
-/* Contact page background - Ben Soltan branded banner */
+/* Contact page background - Ben Soltan branded banner.
+   The image has extra sky baked in at the top so the logo/text in the
+   artwork sits BELOW the page-hero text instead of behind it. */
 body.contact-page {
   background-image: url("/images/cover/final.jpg");
+  background-position: center top;
+}
+
+/* Narrow screens: zoom the banner so the logo still clears the hero text */
+@media (max-width: 767px) {
+  body.contact-page {
+    background-size: auto 170%;
+  }
+}
+
+/* Give the banner logo clear breathing room below the hero text
+   before the page content starts */
+@media (min-width: 768px) {
+  body.contact-page .page-hero {
+    padding-bottom: 200px;
+  }
 }
 
 /* Contact page: no frosted layers - show the banner crisp like the home hero */
