@@ -834,6 +834,51 @@ body.about-page .about-text p {
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 3px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* ========================================
+   Services (منتجاتنا) Page
+   ======================================== */
+/* Services page background - Ben Soltan warehouse photo */
+body.services-page {
+  background-image: url("/images/cover/contact.jpg");
+}
+
+/* Services page: no frosted layers - show the warehouse photo crisp like the home hero */
+body.services-page .page-hero,
+body.services-page .service-detail,
+body.services-page .process {
+  background: none;
+  border-bottom: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Same text treatment as the home hero: white text with dark glow */
+body.services-page .page-title,
+body.services-page .section-title,
+body.services-page .service-detail-title {
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.45);
+}
+
+body.services-page .page-subtitle,
+body.services-page .section-subtitle,
+body.services-page .service-header p,
+body.services-page .service-detail-text > p {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 3px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Category badges: same pill treatment as the home hero badge */
+body.services-page .service-category {
+  color: white;
+  background: rgba(30, 58, 138, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .about-story {
   padding: var(--spacing-16) 0;
   background: rgba(255, 255, 255, 0.9);
