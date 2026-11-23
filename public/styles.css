@@ -886,7 +886,7 @@ body.services-page .service-category {
    The image has extra sky baked in at the top so the logo/text in the
    artwork sits BELOW the page-hero text instead of behind it. */
 body.contact-page {
-  background-image: url("/images/cover/final.jpg");
+  background-image: url("/images/cover/final-banner.jpg");
   background-position: center top;
 }
 
