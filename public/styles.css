@@ -880,65 +880,53 @@ body.services-page .service-category {
 }
 
 /* ========================================
-   Contact (تواصل معنا) Page
+   Contact (Page) - branded banner layout
    ======================================== */
-/* Contact page background - Ben Soltan branded banner.
-   The image has extra sky baked in at the top so the logo/text in the
-   artwork sits BELOW the page-hero text instead of behind it. */
+/* The branded banner is a full-width image in the page flow (not a fixed
+   background) so the whole artwork - logo, ship, truck and goods - stays
+   visible at every viewport. The hero text sits on a sky gradient that
+   blends into the banner's own sky (#A0BBD9). Content below the banner
+   sits on white, so its titles keep the normal dark text colour. */
 body.contact-page {
-  background-image: url("/images/cover/final-banner.jpg");
-  background-position: center top;
+  background-image: none;
 }
 
-/* Narrow screens: zoom the banner so the logo still clears the hero text */
-@media (max-width: 767px) {
-  body.contact-page {
-    background-size: auto 170%;
-  }
-}
-
-/* Give the banner logo clear breathing room below the hero text
-   before the page content starts */
-@media (min-width: 768px) {
-  body.contact-page .page-hero {
-    padding-bottom: 200px;
-  }
-}
-
-/* Contact page: no frosted layers - show the banner crisp like the home hero */
-body.contact-page .page-hero,
-body.contact-page .contact-section,
-body.contact-page .faq-section {
-  background: none;
+body.contact-page .page-hero {
+  background: linear-gradient(180deg, #7FA3CC 0%, #A0BBD9 100%);
   border-bottom: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  padding-bottom: 10px;
+  overflow: hidden;
 }
 
-/* Same text treatment as the home hero: white text with dark glow.
-   Only for titles sitting directly on the photo - the form title stays dark
-   because it lives inside the white form card. */
-body.contact-page .page-title,
-body.contact-page .contact-info .section-title,
-body.contact-page .faq-section .section-title,
-body.contact-page .social-contact h3 {
+.contact-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .contact-banner {
+    width: 150%;
+    max-width: none;
+    margin-inline: -25%;
+  }
+}
+
+/* Hero text keeps the home-hero treatment: white with dark glow
+   (it sits on the sky gradient above the banner) */
+body.contact-page .page-title {
   color: white;
   font-weight: 800;
   text-shadow: 0 2px 14px rgba(15, 23, 42, 0.45);
 }
 
-body.contact-page .page-subtitle,
-body.contact-page .contact-intro,
-body.contact-page .faq-section .section-subtitle {
+body.contact-page .page-subtitle {
   color: #ffffff;
   font-weight: 700;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 3px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.6);
 }
-
-/* The form title lives inside the white form card - keep it dark */
-body.contact-page .contact-form-wrapper .section-title {
-  color: var(--color-text);
-  text-shadow: none;
 }
 
 .about-story {
@@ -1936,6 +1924,7 @@ body.ltr { direction: ltr; }
 body.ltr .about-text .section-title { text-align: left; }
 body.ltr .service-header { text-align: left; }
 body.ltr .contact-info .section-title { text-align: left; }
-body.ltr .contact-form .section-title { text-align: left; }/ /   c a c h e   b u s t  
+body.ltr .contact-form .section-title { text-align: left; }/ /   c a c h e   b u s t 
+ 
  
 
