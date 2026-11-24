@@ -926,9 +926,16 @@ body.contact-page .page-subtitle {
 
 /* All sections below hero: transparent so background image shows through */
 body.contact-page .contact-section,
-body.contact-page .faq-section,
-body.contact-page .cta-section {
+body.contact-page .faq-section {
   background: none;
+  border-bottom: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* CTA section keeps its original blue gradient */
+body.contact-page .cta-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   border-bottom: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -981,9 +988,16 @@ body.contact-page .page-subtitle {
 
 /* All sections below hero: transparent so background image shows through */
 body.contact-page .contact-section,
-body.contact-page .faq-section,
-body.contact-page .cta-section {
+body.contact-page .faq-section {
   background: none;
+  border-bottom: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* CTA section keeps its original blue gradient */
+body.contact-page .cta-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   border-bottom: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
