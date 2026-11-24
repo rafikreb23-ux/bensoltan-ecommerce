@@ -924,18 +924,22 @@ body.contact-page .page-subtitle {
   max-width: 600px;
 }
 
-/* All sections below hero: transparent so background image shows through */
-body.contact-page .contact-section,
-body.contact-page .faq-section {
-  background: none;
+/* Content sections: frosted white veil (site's original pattern) so the
+   banner's baked-in text ("إلى كل ولايات تونس") no longer interferes with
+   the contact info, while the artwork still shows through softly */
+body.contact-page .contact-section {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  padding-top: var(--spacing-16);
 }
 
-/* Extra space so contact info sits below the "إلى كل ولايات تونس" text in the banner */
-body.contact-page .contact-section {
-  padding-top: var(--spacing-16);
+body.contact-page .faq-section {
+  background: rgba(248, 250, 252, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: none;
 }
 
 /* CTA section keeps its original blue gradient */
@@ -991,18 +995,22 @@ body.contact-page .page-subtitle {
   max-width: 600px;
 }
 
-/* All sections below hero: transparent so background image shows through */
-body.contact-page .contact-section,
-body.contact-page .faq-section {
-  background: none;
+/* Content sections: frosted white veil (site's original pattern) so the
+   banner's baked-in text ("إلى كل ولايات تونس") no longer interferes with
+   the contact info, while the artwork still shows through softly */
+body.contact-page .contact-section {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  padding-top: var(--spacing-16);
 }
 
-/* Extra space so contact info sits below the "إلى كل ولايات تونس" text in the banner */
-body.contact-page .contact-section {
-  padding-top: var(--spacing-16);
+body.contact-page .faq-section {
+  background: rgba(248, 250, 252, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: none;
 }
 
 /* CTA section keeps its original blue gradient */
