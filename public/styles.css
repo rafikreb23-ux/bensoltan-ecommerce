@@ -882,11 +882,14 @@ body.services-page .service-category {
 /* ========================================
    Contact (تواصل معنا) Page - Full-page fixed background
    ======================================== */
-/* Full artwork (logo, ship, truck, goods) as fixed page background. */
-/* Contact page: full-screen background via pseudo-element */
+/* Full artwork (logo, ship, truck, goods, map text) as a fixed page
+   background, exactly like the home/about pages. No frosted veil:
+   every section below the hero is transparent so the artwork shows
+   through across the whole page. */
 body.contact-page {
-  background: none !important; /* kill base body background */
+  background: none !important;
 }
+
 body.contact-page::before {
   content: "";
   position: fixed;
@@ -896,7 +899,7 @@ body.contact-page::before {
   pointer-events: none;
 }
 
-/* Hero section: title/subtitle sit in the upper sky area (above the image's logo/text) */
+/* Hero: copy sits in the sky at the top, above the image's logo */
 body.contact-page .page-hero {
   background: none;
   border-bottom: none;
@@ -910,11 +913,10 @@ body.contact-page .page-hero {
   padding-bottom: var(--spacing-6);
 }
 
-/* Hero text: white with dark glow (home-hero style) */
 body.contact-page .page-title {
   color: white;
   font-weight: 800;
-  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.45);
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
   margin-bottom: var(--spacing-3);
 }
 
@@ -922,27 +924,19 @@ body.contact-page .page-subtitle {
   color: var(--color-primary);
   font-weight: 700;
   max-width: 600px;
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.55);
 }
 
-/* Content sections: frosted white veil (site's original pattern) so the
-   banner's baked-in text ("إلى كل ولايات تونس") no longer interferes with
-   the contact info, while the artwork still shows through softly */
-body.contact-page .contact-section {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: none;
-  padding-top: var(--spacing-16);
-}
-
+/* All sections below hero: transparent so the artwork shows through (no veil) */
+body.contact-page .contact-section,
 body.contact-page .faq-section {
-  background: rgba(248, 250, 252, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: none;
   border-bottom: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-/* CTA section keeps its original blue gradient */
+/* CTA keeps its original blue gradient */
 body.contact-page .cta-section {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   border-bottom: none;
@@ -950,7 +944,7 @@ body.contact-page .cta-section {
   -webkit-backdrop-filter: none;
 }
 
-/* Content cards stay white for readability */
+/* Cards stay white for readability */
 body.contact-page .contact-method,
 body.contact-page .contact-form-wrapper,
 body.contact-page .faq-item {
@@ -971,78 +965,7 @@ body.contact-page .faq-section .section-subtitle {
   color: var(--color-text-secondary);
 }
 
-/* Mobile: reduce hero height */
-@media (max-width: 767px) {
-  body.contact-page .page-hero {
-    min-height: 35vh;
-    padding-top: calc(var(--header-height) + var(--spacing-6));
-    padding-bottom: var(--spacing-10);
-  }
-}
-
-
-/* Hero text: white with dark glow (home-hero style) */
-body.contact-page .page-title {
-  color: white;
-  font-weight: 800;
-  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.45);
-  margin-bottom: var(--spacing-3);
-}
-
-body.contact-page .page-subtitle {
-  color: var(--color-primary);
-  font-weight: 700;
-  max-width: 600px;
-}
-
-/* Content sections: frosted white veil (site's original pattern) so the
-   banner's baked-in text ("إلى كل ولايات تونس") no longer interferes with
-   the contact info, while the artwork still shows through softly */
-body.contact-page .contact-section {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: none;
-  padding-top: var(--spacing-16);
-}
-
-body.contact-page .faq-section {
-  background: rgba(248, 250, 252, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: none;
-}
-
-/* CTA section keeps its original blue gradient */
-body.contact-page .cta-section {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  border-bottom: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
-/* Content cards (contact info, form, FAQ items) stay white for readability */
-body.contact-page .contact-method,
-body.contact-page .contact-form-wrapper,
-body.contact-page .faq-item {
-  background: var(--color-surface-elevated);
-}
-
-/* Section titles in content areas: normal dark text (on white cards) */
-body.contact-page .contact-info .section-title,
-body.contact-page .contact-form-wrapper .section-title,
-body.contact-page .faq-section .section-title,
-body.contact-page .social-contact h3 {
-  color: var(--color-text);
-  text-shadow: none;
-}
-
-body.contact-page .contact-intro,
-body.contact-page .faq-section .section-subtitle {
-  color: var(--color-text-secondary);
-}
-
-/* Mobile: reduce hero height, keep text in sky */
+/* Mobile: compact hero, text stays in the sky */
 @media (max-width: 767px) {
   body.contact-page .page-hero {
     min-height: 18vh;
@@ -1050,6 +973,7 @@ body.contact-page .faq-section .section-subtitle {
     padding-bottom: var(--spacing-5);
   }
 }
+
 .about-story {
   padding: var(--spacing-16) 0;
   background: rgba(255, 255, 255, 0.9);
