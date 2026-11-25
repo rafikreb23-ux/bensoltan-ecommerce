@@ -879,6 +879,15 @@ body.services-page .service-category {
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* "How we work" step cards: frosted glass look, same as the home page
+   cards and the contact page cards */
+body.services-page .process-step {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
 /* ========================================
    Contact (تواصل معنا) Page - Full-page fixed background
    ======================================== */
