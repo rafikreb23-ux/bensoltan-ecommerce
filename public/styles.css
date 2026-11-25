@@ -946,11 +946,15 @@ body.contact-page .cta-section {
   -webkit-backdrop-filter: none;
 }
 
-/* Cards stay white for readability */
+/* Cards: frosted glass look, same as the home page cards
+   (feature-card / service-card) */
 body.contact-page .contact-method,
 body.contact-page .contact-form-wrapper,
 body.contact-page .faq-item {
-  background: var(--color-surface-elevated);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
 }
 
 /* Section titles + intros sit directly on the transparent artwork:
