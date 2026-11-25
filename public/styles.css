@@ -913,20 +913,20 @@ body.contact-page .page-hero {
   padding-bottom: var(--spacing-6);
 }
 
-/* Hero copy in the email-newsletter colors: black title + brand blue subtitle
-   (soft white glow keeps both readable over the sky) */
+/* All text on the artwork: white with dark glow (site-wide hero pattern);
+   the blue touch stays in buttons, links and icons */
 body.contact-page .page-title {
-  color: var(--color-text);
+  color: white;
   font-weight: 800;
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
   margin-bottom: var(--spacing-3);
 }
 
 body.contact-page .page-subtitle {
-  color: var(--color-primary);
+  color: white;
   font-weight: 700;
   max-width: 600px;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.55);
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
 }
 
 /* All sections below hero: transparent so the artwork shows through (no veil) */
@@ -954,19 +954,18 @@ body.contact-page .faq-item {
 }
 
 /* Section titles + intros sit directly on the transparent artwork:
-   email-newsletter colors like the hero — black titles, blue intros
-   (soft white glow keeps both readable over the sky) */
+   white with dark glow, like the hero */
 body.contact-page .contact-info .section-title,
 body.contact-page .faq-section .section-title,
 body.contact-page .social-contact h3 {
-  color: var(--color-text);
-  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.6);
+  color: white;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
 }
 
 body.contact-page .contact-intro,
 body.contact-page .faq-section .section-subtitle {
-  color: var(--color-primary);
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.55);
+  color: white;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
 }
 
 /* Titles inside white cards (the form) stay dark */
