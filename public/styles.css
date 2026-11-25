@@ -951,18 +951,25 @@ body.contact-page .faq-item {
   background: var(--color-surface-elevated);
 }
 
-/* Section titles in content areas: normal dark text */
+/* Section titles + intros sit directly on the transparent artwork:
+   white with dark glow, same colors as the hero */
 body.contact-page .contact-info .section-title,
-body.contact-page .contact-form-wrapper .section-title,
 body.contact-page .faq-section .section-title,
 body.contact-page .social-contact h3 {
-  color: var(--color-text);
-  text-shadow: none;
+  color: white;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
 }
 
 body.contact-page .contact-intro,
 body.contact-page .faq-section .section-subtitle {
-  color: var(--color-text-secondary);
+  color: white;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
+}
+
+/* Titles inside white cards (the form) stay dark */
+body.contact-page .contact-form-wrapper .section-title {
+  color: var(--color-text);
+  text-shadow: none;
 }
 
 /* Mobile: compact hero, text stays in the sky */
