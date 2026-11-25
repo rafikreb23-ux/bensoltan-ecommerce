@@ -913,18 +913,20 @@ body.contact-page .page-hero {
   padding-bottom: var(--spacing-6);
 }
 
+/* Hero copy in the email-newsletter colors: black title + brand blue subtitle
+   (soft white glow keeps both readable over the sky) */
 body.contact-page .page-title {
-  color: white;
+  color: var(--color-text);
   font-weight: 800;
-  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.6);
   margin-bottom: var(--spacing-3);
 }
 
 body.contact-page .page-subtitle {
-  color: white;
+  color: var(--color-primary);
   font-weight: 700;
   max-width: 600px;
-  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.55);
 }
 
 /* All sections below hero: transparent so the artwork shows through (no veil) */
