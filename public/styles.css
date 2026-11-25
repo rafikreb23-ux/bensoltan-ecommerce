@@ -954,18 +954,19 @@ body.contact-page .faq-item {
 }
 
 /* Section titles + intros sit directly on the transparent artwork:
-   white with dark glow, same colors as the hero */
+   email-newsletter colors like the hero — black titles, blue intros
+   (soft white glow keeps both readable over the sky) */
 body.contact-page .contact-info .section-title,
 body.contact-page .faq-section .section-title,
 body.contact-page .social-contact h3 {
-  color: white;
-  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
+  color: var(--color-text);
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.6);
 }
 
 body.contact-page .contact-intro,
 body.contact-page .faq-section .section-subtitle {
-  color: white;
-  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
+  color: var(--color-primary);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.55);
 }
 
 /* Titles inside white cards (the form) stay dark */
