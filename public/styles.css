@@ -921,10 +921,10 @@ body.contact-page .page-title {
 }
 
 body.contact-page .page-subtitle {
-  color: var(--color-primary);
+  color: white;
   font-weight: 700;
   max-width: 600px;
-  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.55);
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
 }
 
 /* All sections below hero: transparent so the artwork shows through (no veil) */
