@@ -85,13 +85,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   /* ðŸŒ„ Ø§Ù„Ø®Ù„ÙÙŠØ© Ø§Ù„ÙƒØ§Ù…Ù„Ø© Ù„Ù„ØµÙØ­Ø© â€” ØµÙˆØ±Ø© Ø«Ø§Ø¨ØªØ© */
-  background-image: url("/images/home-hero.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
+}
+
+/* Fixed full-viewport background layer - same technique as the contact page.
+   background-attachment: fixed is ignored on mobile browsers, so the body
+   background was showing only at the top on phones. This layer keeps the
+   photo covering the whole screen on desktop AND mobile. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/home-hero.jpg") center center / cover no-repeat #82776E;
+  pointer-events: none;
 }
 
 img, svg, video {
@@ -803,8 +811,13 @@ h1, h2, h3, h4, h5, h6 {
    About Page
    ======================================== */
 /* About page background - Ben Soltan warehouse cover photo */
-body.about-page {
-  background-image: url("/images/cover/Designerproducts.jpg");
+body.about-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/cover/Designerproducts.jpg") center center / cover no-repeat #8A8585;
+  pointer-events: none;
 }
 
 /* About page: no frosted layers - show the warehouse photo crisp like the home hero */
@@ -860,8 +873,13 @@ body.about-page .milestone-label {
    Services (منتجاتنا) Page
    ======================================== */
 /* Services page background - Ben Soltan warehouse photo */
-body.services-page {
-  background-image: url("/images/cover/contact.jpg");
+body.services-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/cover/contact.jpg") center center / cover no-repeat #635B57;
+  pointer-events: none;
 }
 
 /* Services page: no frosted layers - show the warehouse photo crisp like the home hero */
@@ -926,7 +944,8 @@ body.contact-page::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: url("/images/cover/contact-banner.jpg") center top / cover no-repeat #A0BBD9;
+  /* the ORIGINAL final artwork - same file on desktop and phones */
+  background: url("/images/cover/contact-banner.jpg") center center / cover no-repeat #A0BBD9;
   pointer-events: none;
 }
 
@@ -2018,22 +2037,6 @@ body.ltr .contact-form .section-title { text-align: left; }
 /* ========================================
    Mobile backgrounds (phones)
    ======================================== */
-/* background-attachment: fixed is broken on iOS (stretched over the whole
-   page) and cover crops badly on portrait screens (narrow zoomed slice).
-   On phones every photo background becomes a natural full-width band at
-   the top of the page, with a dark slate color below so the white glowing
-   text stays readable everywhere. */
-@media (max-width: 767px) {
-  body {
-    background-attachment: scroll;
-    background-size: 100% auto;
-    background-position: top center;
-    background-color: #0f172a;
-  }
-
-  /* Contact page: sky-extended artwork so the hero text always sits in
-     the sky above the logo; the artwork still fills the whole screen */
-  body.contact-page::before {
-    background-image: url("/images/cover/contact-hero-m.jpg");
-  }
-}
+/* All pages (including contact) use the same fixed full-viewport ::before
+   layer with the ORIGINAL artwork on every screen size - phones get the
+   natural cover crop, no manipulated variants. */
