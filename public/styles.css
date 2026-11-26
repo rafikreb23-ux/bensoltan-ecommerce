@@ -844,6 +844,18 @@ body.about-page .team-card {
   border: 1px solid rgba(255, 255, 255, 0.55);
 }
 
+/* Milestones ("رحلتنا بالأرقام"): no blue band — transparent like the other
+   sections so the photo shows through, with the same glowing white text */
+body.about-page .milestones {
+  background: none;
+}
+
+body.about-page .milestone-number,
+body.about-page .milestone-label {
+  color: white;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.5);
+}
+
 /* ========================================
    Services (منتجاتنا) Page
    ======================================== */
@@ -2001,7 +2013,27 @@ body.ltr { direction: ltr; }
 body.ltr .about-text .section-title { text-align: left; }
 body.ltr .service-header { text-align: left; }
 body.ltr .contact-info .section-title { text-align: left; }
-body.ltr .contact-form .section-title { text-align: left; }/ /   c a c h e   b u s t 
- 
- 
+body.ltr .contact-form .section-title { text-align: left; }
 
+/* ========================================
+   Mobile backgrounds (phones)
+   ======================================== */
+/* background-attachment: fixed is broken on iOS (stretched over the whole
+   page) and cover crops badly on portrait screens (narrow zoomed slice).
+   On phones every photo background becomes a natural full-width band at
+   the top of the page, with a dark slate color below so the white glowing
+   text stays readable everywhere. */
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+    background-size: 100% auto;
+    background-position: top center;
+    background-color: #0f172a;
+  }
+
+  /* Contact page: sky-extended artwork so the hero text always sits in
+     the sky above the logo; the artwork still fills the whole screen */
+  body.contact-page::before {
+    background-image: url("/images/cover/contact-hero-m.jpg");
+  }
+}
